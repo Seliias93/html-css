@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z-index</title>
+    <style>
+        h1 {
+  margin: 0px;
+  padding: 10px;
+  background: lightblue;
+}
+
+.index1 {
+  position: relative;
+  background: greenyellow;
+  top: 40px;
+  z-index: 1;
+}
+
+.index2 {
+  position: relative;
+  background: rgb(172, 121, 121);
+  top: -40px;
+  z-index: -1;
+}
+.index3{
+    background-color: greenyellow;
+    position: relative;
+    z-index: -4;
+    top: 30px;
+}
+    </style>
+</head>
+<body>
+    <h1>Elemento 1</h1>
+<h1 class="index1">Elemento 2</h1>
+<h1>Elemento 3</h1>
+<h1 class="index3">Elemento 4</h1>
+<h1 class="index2">Elemento 4</h1>
+<h1>Elemento 5</h1>
+</body>
+</html>
