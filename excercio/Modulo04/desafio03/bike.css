@@ -55,6 +55,9 @@ p{
     text-align: right;
     position: relative;
     display: grid;
+    gap: 20px;
+    align-content: center;
+    justify-items: end;
 }
 .detalhe{
     width: 60px;
@@ -68,4 +71,17 @@ p{
      color: #fff;
      padding: 15px 30px;
      text-transform: uppercase;
+}
+.subtitulo{
+    font-size: 64px;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.2);
+    text-align: right;
+    padding: 40px;
+    align-self: center;
+}
+.rodape footer {
+    background: #e21;
+    padding: 10px 30px;
+    text-transform: uppercase;
 }
