@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 4px;
+  background: #caf;
+}
+
+li {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+li::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-image: linear-gradient(#caf, #fff);
+  border: 2px solid #caf;
+  margin-right: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Nossos Produtos</h1>
+
+<ul>
+  <li>Sobre</li>
+  <li>Produtos</li>
+  <li>Contato</li>
+</ul>
+
+</body>
+</html>
