@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsividade </title>
+
+    <style>
+        img {
+  max-width: 100%;
+  display: block;
+}
+
+div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+div h1 {
+  grid-column: 1 / -1;
+}
+
+/* abaixo de 600px */
+@media (max-width: 600px) {
+  div {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* acima de 1000px */
+@media (min-width: 1000px) {
+  html {
+    font-size: 150%;
+  }
+}
+
+/* entre 800px e 900px */
+@media (min-width: 800px) and (max-width: 900px) {
+  h1 {
+    background: lightgreen;
+  }
+}
+@media (min-width: 1000px), (max-width:500px){
+    html{
+        font-size: 150%;
+    }
+}
+
+    </style>
+
+</head>
+<body>
+        <div>
+            <h1>Nossas Bicicletas</h1>
+            <img src="bicicleta.jpg" alt="Bicicleta" />
+            <p>
+              A Nimbus Stark é a melhor Bikcraft já criada pela nossa equipe. Ela vem
+              equipada com os melhores acessórios, o que garante maior velocidade.
+            </p>
+          </div>
+
+        
+</body>
+</html>
+          
