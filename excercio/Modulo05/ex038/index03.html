@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+  font-size: 2rem;
+}
+
+/* (0, 1, 0) */
+.titulo {
+  color: tomato;
+  padding: 10px;
+}
+
+/* (1, 0, 0) */
+#produtos {
+  color: lightgreen;
+}
+
+/* (2, 1, 0) */
+#intro #produtos.titulo {
+  color: violet;
+}
+
+/* (2, 0, 0) */
+#intro #produtos {
+  color: blueviolet;
+}
+
+/* (0, 1, 4) */
+html body section h2.titulo {
+  border-left: 8px solid lightgreen;
+}
+
+/* (0, 1, 3) */
+body section h2.titulo {
+  border-left: 8px solid lightsalmon;
+}
+
+/* (1, 0, 0) */
+#servicos {
+  border-left: 8px solid lightskyblue;
+}
+
+    </style>
+</head>
+<body>
+    <section id="intro">
+        <h2 id="produtos" class="titulo">Produtos</h2>
+        <h2 id="servicos" class="titulo">Serviços</h2>
+      </section>
+      
+</body>
+</html>
