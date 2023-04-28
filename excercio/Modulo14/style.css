@@ -6,6 +6,7 @@ body{
 img {
     width: 70px;
     border-radius: 5px;
+    
   }
 
 li {
@@ -53,12 +54,17 @@ grid-template-areas:
 
 .content {
     grid-area: content;
-    max-width: 900px;
+    max-width: 650px;
     margin: 0 auto;
     padding: 30px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
+    margin-top: 100px;
+  }
+  
+  p{
+    color: red;
   }
 
 .container-img{
@@ -69,16 +75,19 @@ grid-template-areas:
 .imgs{
     width: 650px;
     align-items: end;
+    margin-top: 55px;
 }
 
+
 .footer {
-    grid-area: footer;
-    background: linear-gradient(135deg, #c51616, #c70000);
-  }
-  
-  .footer p {
-    color: rgb(0, 0, 0);
-    text-align: center;
-    padding: 7px;
-  }
-  
+  grid-area: footer;
+  background: linear-gradient(135deg,  #c51616, #c70000);
+}
+
+.footer p {
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-style: bold;
+  padding: 7px;
+}
