@@ -17,6 +17,11 @@ a {
     text-decoration: none;
   }
 
+  p{
+    max-width: 650px;
+    text-align: center;
+    font-size: 20px;
+  }
 .estrutura {
 display: grid;
 grid-template-columns: minmax(160px, 1fr) 3fr 300px;
@@ -24,6 +29,28 @@ grid-template-areas:
 'header header header'
 'sidenav content anuncios'
 'footer footer footer';
+}
+
+@media (max-width: 1200px) {
+  .estrutura {
+    grid-template-areas:
+      'header header header'
+      'sidenav content content'
+      'sidenav anuncios anuncios'
+      'footer footer footer';
+  }
+}
+
+@media (max-width: 760px) {
+  .estrutura {
+    grid-template-columns: 100%;
+    grid-template-areas:
+      'header'
+      'sidenav'
+      'content'
+      'anuncios'
+      'footer';
+  }
 }
 
 .header {
@@ -52,26 +79,48 @@ grid-template-areas:
     border-radius: 12px;
 }
 
+
+@media (max-width: 760px) {
+  .header {
+    grid-template-columns: auto;
+  }
+  .logo {
+    margin-bottom: 20px;
+  }
+  .header nav a {
+    font-size: 1em;
+  }
+  .header li + li {
+    margin-left: 10px;
+  }
+}
+
 .content {
     grid-area: content;
     max-width: 650px;
     margin: 0 auto;
     padding: 30px;
-    display: grid;
+    display: flex;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
     margin-top: 100px;
   }
   
-  p{
-    color: red;
-  }
+
 
 .container-img{
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
 }
+
+
+@media (max-width: 600px) {
+  .content {
+    grid-template-columns: auto;
+  }
+}
+
 .imgs{
     width: 650px;
     align-items: end;
@@ -79,14 +128,68 @@ grid-template-areas:
 }
 
 
+.sidenav {
+  grid-area: sidenav;
+  background: #ffffff;
+  padding: 30px;
+}
+
+.sidenav li a {
+  display: block;
+  min-width: 60px;
+  max-width: 100px;
+  margin: 0 auto 30px auto;
+  background: rgb(0, 0, 0);
+  padding: 20px;
+  color: white;
+  border-radius: 5px;
+}
+
+.sidenav li a:hover {
+  background: #c51616;
+}
+.div-cont{
+margin-left: 30px;
+}
+
+@media (max-width: 760px) {
+  .sidenav {
+    position: relative;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+  .sidenav::after {
+    content: '→';
+    position: absolute;
+    top: 5px;
+    right: 30px;
+    color: rgba(0, 0, 0, 0.3);
+    animation: seta 0.5s ease-in 0s infinite alternate;
+  }
+  .sidenav ul {
+    display: flex;
+  }
+  .sidenav li {
+    flex: 1 0 60px;
+  }
+  .sidenav {
+    padding: 0 30px;
+  }
+  .sidenav li a {
+    margin: 30px 30px 30px 0;
+  }
+}
+
 .footer {
   grid-area: footer;
   background: linear-gradient(135deg,  #c51616, #c70000);
+  margin-top: 50px;
 }
 
 .footer p {
   color: white;
-  text-align: center;
+  text-align:end;
   text-transform: uppercase;
   font-style: bold;
   padding: 7px;
