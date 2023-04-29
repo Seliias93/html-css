@@ -1,0 +1,44 @@
+body,p,
+h1,ul,li,
+blockquote {
+  padding: 0px;
+  margin: 0px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.menu {
+    scroll-behavior: smooth;
+    height: 100vh;
+    width: 100%;
+    background-image: url(img/Valton-Pessoa-868x1300.jpg);
+    background-size:cover;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 45px;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.logo {
+    color: white;
+    font-size: 35px;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
